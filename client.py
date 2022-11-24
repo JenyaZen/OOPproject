@@ -9,6 +9,7 @@ import sys
 from Container import Container
 from LanguageOOP import LanguageOOP, Inheritance
 from LanguageProcedure import LanguageProcedure
+from LanguageFunctional import LanguageFunctional, Typization
 
 
 print('Hello\n')
@@ -23,6 +24,10 @@ print('Adding objects from ' + sys.argv[1] + ' to Container\n')
 container.openFromFile(sys.argv[1])
 print('Container filled!\n')
 print('Hey, container, what you got?\n')
+container.showInfo()
+print('Now sorting...')
+container.sortList()
+print('What you got after sorting?')
 container.showInfo()
 print('Emptying container\n')
 container.clear()

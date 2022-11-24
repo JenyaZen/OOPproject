@@ -53,4 +53,19 @@ class Container:
         
         with open(file, 'wb') as f:
             pickle.dump(saveData, f)
+            
+    def sortList(self):    
+        if(self.head == None):    
+            return;    
+        else:    
+            current = self.head    
+            while(current.next != None):    
+                index = current.next;    
+                while(index != None):    
+                    if(int(current.data.mentions) > int(index.data.mentions)):    
+                        temp = current.data;    
+                        current.data = index.data;    
+                        index.data = temp;    
+                    index = index.next    
+                current = current.next
                 

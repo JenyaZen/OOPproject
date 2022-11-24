@@ -15,8 +15,8 @@ class Inheritance(Enum):
     interface = 3
 
 class LanguageOOP(ProgrammingLanguage.ProgrammingLanguage):
-    def __init__(self, name, year, inheritance):
-        super().__init__(name, year)
+    def __init__(self, name, year, mentions, inheritance):
+        super().__init__(name, year, mentions)
         self.inheritance = inheritance
         
     def out(self):
@@ -25,6 +25,8 @@ class LanguageOOP(ProgrammingLanguage.ProgrammingLanguage):
               "My characteristics is:\n" +
               "Name: " + self.name + '\n' +
               "Year: " + self.year +'\n' +
+              "Years past: " + str(self.numberOfYears()) + '\n' +
+              "Mentions: " + self.mentions +'\n' +
               "Type of inheritance: " + self.inheritance.name + '\n' +
               '_____________________________\n')
         
